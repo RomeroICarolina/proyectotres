@@ -1,0 +1,81 @@
+.encabezado{display:flex;
+
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  background-color:white;
+  z-index: 1000;}
+
+/* ------------------fin del encabezado ----------------------------- */
+
+
+#title {text-align: center;
+
+  position:relative;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); }
+  
+  
+.contenedor{
+  position: relative;
+  width: 100%;
+  max-width: 8000px;
+  margin: auto;}
+
+.imagen1{
+  width: 100%;
+  height: auto;
+  display: block;}
+
+.boton {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50px);
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;}
+
+  /* ---------------------------------------------------fin del primer contenedor --------------------------------------------------------- */
+
+ #carouselExampleInterval{
+    width: 8000px;}
+
+.contenedor1{background-color: black; 
+position: relative;}
+  
+/* ------------------------------------------------------fin del segundo contenedor----------------------------------------------------- */
+
+
+
+.footer{display: flex; justify-content: center; align-items: center;}
+
+.imgfoot{height: 30px;width: 30px;}
+
+/* --------------------------------------INICIO pagina de contacto ----------------------------- */
+.contenedorcontacto{
+  position: relative;
+  width: 80%;
+  max-width: 8000px;
+  margin: auto;
+  background-color: #383636; } 
+
+.form-label{
+  color: white;}
+
+.form-check-label{
+  color: white;}
+
