@@ -1,0 +1,96 @@
+@use './variables' as variables;
+
+.contenedor {
+  height: 100vh;
+  background-image: url(imagenes/fondo3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: variables.$color-fondo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.contenedorb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: variables.$color-texto;
+  gap: 100px;
+}
+
+#title {
+  font-size: variables.$titulo-grande;
+  margin: 0;
+}
+
+.boton {
+  padding: 12px 24px;
+  font-size: variables.$texto;
+  background-color: variables.$color-primario;
+  color: variables.$color-fondo;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.boton:hover {
+  background-color: variables.$color-hover;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.logomovil {
+  width: 200px;
+  height: auto;
+  animation: mover-horizontal 4s ease-in-out infinite;
+}
+
+@keyframes mover-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.presentacion {
+  background-color: #000;
+  padding: 3rem 1.5rem;
+
+  h2, p, li {
+    color: #fff;
+  }
+
+  .texto-presentacion {
+    padding: 2rem;
+
+    h2 {
+      font-size: 2rem;
+      font-family: variables.$fuente-principal;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  .carousel-item img {
+    max-height: 450px;
+    object-fit: contain;
+  }
+}

@@ -1,0 +1,19 @@
+@use './variables' as variables;
+
+.footer {
+  background-color:variables.$color-footer-bg;
+  color: variables.$color-footer-texto;
+  text-align: center;
+  padding: variables.$espaciado-base;
+}
+
+.imgfoot {
+  width: 40px;
+  height: auto;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.imgfoot:hover {
+  transform: scale(1.1);
+}

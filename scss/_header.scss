@@ -1,0 +1,38 @@
+@use './variables' as variables;
+
+body {
+  background-color: variables.$color-fondo;
+  font-family: variables.$fuente-principal;
+}
+
+header {
+  background-color: variables.$color-fondo;
+  color: variables.$color-texto;
+  font-family: variables.$fuente-principal;
+  padding: variables.$espaciado-base;
+}
+
+.container-fluid {
+  background-color: variables.$color-fondo;
+  color: variables.$color-texto;
+  padding: variables.$espaciado-base;
+}
+
+
+.container-fluid .nav-link {
+  color: variables.$color-texto;
+}
+
+.navbar-toggler {
+  border-color: variables.$color-texto;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.custom-navbar {
+  background-color: variables.$color-fondo;
+  border-bottom: none;
+  box-shadow: none;
+}
