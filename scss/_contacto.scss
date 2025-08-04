@@ -1,34 +1,70 @@
 @use './variables' as variables;
 
+/* Primera Seccion pagina Contacto */
+.contacto-section {
+  padding: variables.$espaciado-base;
+  font-family: variables.$fuente-principal;
+  color: variables.$color-texto;
+
+  h4,
+  h5 {
+    color: variables.$color-texto;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: variables.$color-texto;
+    text-decoration: underline;
+  }
+
+  p {
+    color: variables.$color-texto;
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* Seccion del formulario de contacto */
 .formulario-contacto {
-  max-width: 600px;
-  margin: 0 auto;
   background-color: variables.$color-primario;
   padding: variables.$espaciado-base;
   border-radius: 10px;
-  font-family: variables.$fuente-principal;
   color: variables.$color-fondo;
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: variables.$espaciado-base;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-family: variables.$fuente-principal;
+  }
+
+  .form-check-input {
+    margin-right: 0.5rem;
+  }
+
+  .form-check-label {
+    color: variables.$color-fondo;
+  }
+
+  .btn-formulario {
+    background-color: variables.$color-fondo;
+    color: variables.$color-texto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: variables.$espaciado-base;
+
+    &:hover {
+      background-color: variables.$color-hover;
+    }
+  }
 }
 
-.formulario-contacto input,
-.formulario-contacto textarea {
-  width: 100%;
-  padding: variables.$espaciado-base;
-  margin-bottom: 15px;
-  border: none;
-  border-radius: 5px;
-  font-family: variables.$fuente-principal;
-}
-
-.btn-formulario {
-  background-color: variables.$color-fondo;
-  color: variables.$color-texto;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn-formulario:hover {
-  background-color: variables.$color-hover;
+.boton-enviar {
+  margin-top: 2rem;
 }

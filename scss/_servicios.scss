@@ -1,9 +1,15 @@
 @use './variables' as variables;
 
+body {
+  background-color: variables.$color-fondo;
+  color: variables.$color-texto;
+  font-family: variables.$fuente-principal;
+}
+
+/* Carrusel de la primer seccion de la pagina Servicios  */
 .carousel {
   width: 100%;
-  max-width: 700px; // Podés aumentar más si querés que llegue más a la derecha
-}
+  max-width: 700px;}
 
 .carousel-img {
   width: 100%;
@@ -15,15 +21,21 @@
   margin: 0 auto;
 
   @media (max-width: 768px) {
-    height: 250px;
-  }
+    height: 250px;}
 
   @media (max-width: 480px) {
-    height: 180px;
-  }
+    height: 180px;}
 }
 
-// Imagenes de fondo
+.carousel-item img {
+  height: 400px;
+  object-fit: cover;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    height: 250px;}
+}
+
 .bg-1 {
   background-image: url("../imagenes/cosmatic.png");
 }
@@ -34,34 +46,55 @@
   background-image: url("../imagenes/tarjeta.png");
 }
 
-// style.scss (al final)
-.container {
-  max-width: 1140px;
-  margin: 40px auto 0 auto; // arriba 40px, los costados auto, abajo 0
+
+/* --- Segunda parte de la pagina Servicios ---- */
+
+.servicios-extra {
+  h5 {
+    font-weight: 600;
+    color: variables.$color-secundario;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;}
+
+  ul {
+    padding-left: 1.2rem;
+    list-style-type: disc;
+    color: variables.$color-texto;
+    font-size: 0.95rem;}
+
+  p {
+    color: variables.$color-texto;
+    font-size: variables.$texto;}
+
+  .icono-servicio {
+    display: block;
+    margin: 0 auto 0.5rem auto;
+    width: 32px;
+    height: auto;}
 }
 
-// Espaciado horizontal más amplio solo en desktop
+/*--- Corresponde a la parte de Servicios que esta en el Index, son las tarjeta que muestran los servicios que brinda la agencia ---- */
+
 .tarjetas-ajustadas {
   padding-left: 3rem;
   padding-right: 3rem;
 
   @media (min-width: 1200px) {
     padding-left: 6rem;
-    padding-right: 6rem;
-  }
+    padding-right: 6rem;}
 }
 
-// Estilos de cada tarjeta
 .custom-card {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
   overflow: hidden;
   transition: transform 0.3s;
 
+  .card-img-top {
+  height: 300px;
+  object-fit: cover;}
+
+
   &:hover {
-    transform: translateY(-5px);
-  }
+    transform: translateY(-5px);}
 }
-
-
-

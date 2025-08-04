@@ -7,18 +7,21 @@
   font-family: variables.$fuente-principal;
   color: variables.$color-texto;
 
-
-  h1, h2, h3 {
+  /* Titulos para Politicas y Terminos  */
+  h1,
+  h2,
+  h3 {
     margin-top: 2rem;
     font-weight: bold;
     color: variables.$color-texto;
-
   }
 
+  /* Parrafos para Politicas y Terminos  */
   p {
     margin-bottom: 1rem;
   }
 
+  /* Listas para Politicas y Terminos */
   ul {
     margin-left: 1.5rem;
     list-style: disc;

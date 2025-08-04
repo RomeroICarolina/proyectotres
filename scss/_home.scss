@@ -1,4 +1,7 @@
+@use 'sass:color';
 @use './variables' as variables;
+
+/* Primera Seccion */
 
 .contenedor {
   height: 100vh;
@@ -27,20 +30,27 @@
   margin: 0;
 }
 
+/* Boton de la primera seccion   */
 .boton {
-  padding: 12px 24px;
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
   font-size: variables.$texto;
-  background-color: variables.$color-primario;
-  color: variables.$color-fondo;
+  font-family: variables.$fuente-principal;
+  background-color: variables.$color-secundario;
+  color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: color.scale(variables.$color-secundario, $lightness: -10%);
+  }
 }
 
-.boton:hover {
-  background-color: variables.$color-hover;
-}
+/* Logo Animado */
 .logo {
   display: flex;
   justify-content: center;
@@ -54,16 +64,12 @@
 }
 
 @keyframes mover-horizontal {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(50px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(50px); }
+  100% { transform: translateX(0); }
 }
+
+/* Seccion Carrusel */
 
 .presentacion {
   background-color: #000;
@@ -83,6 +89,7 @@
 
     ul {
       padding-left: 1.5rem;
+
       li {
         margin-bottom: 0.5rem;
       }

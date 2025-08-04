@@ -1,41 +1,51 @@
-@charset "UTF-8";
-/* COLORES BASE */
-/* FOOTER */
-/* TIPOGRAFÍAS */
+/* Colores-----*/
+/* Footer---- */
+/* Tipografias---- */
+/* General */
 body {
   background-color: #000;
   font-family: "Montserrat", sans-serif;
 }
 
-header {
-  background-color: #000;
-  color: #fff;
+/*--Navbar-- */
+.custom-navbar {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-bottom: none;
+  box-shadow: none;
+}
+.custom-navbar .navbar-nav .nav-link {
+  color: #fff !important;
   font-family: "Montserrat", sans-serif;
-  padding: 20px;
+  font-size: 1rem;
 }
-
-.container-fluid {
-  background-color: #000;
-  color: #fff;
-  padding: 20px;
+.custom-navbar .navbar-nav .nav-link:hover {
+  color: #dddddd !important;
 }
-
-.container-fluid .nav-link {
-  color: #fff;
+.custom-navbar .navbar-brand {
+  color: #fff !important;
 }
-
-.navbar-toggler {
-  border-color: #fff;
+.custom-navbar .navbar-toggler {
+  border-color: #fff !important;
 }
-
-.navbar-toggler-icon {
+.custom-navbar .navbar-toggler-icon {
   filter: invert(1);
 }
 
-.custom-navbar {
-  background-color: #000;
-  border-bottom: none;
-  box-shadow: none;
+/* Logo en el Header */
+.logo-zero img {
+  width: 100px;
+  position: absolute;
+  top: -40px;
+  right: 160px;
+  transform: translateY(0%);
+}
+@media (max-width: 576px) {
+  .logo-zero img {
+    top: -20px;
+    right: 10px;
+    width: 80px;
+  }
 }
 
 .footer {
@@ -56,6 +66,7 @@ header {
   transform: scale(1.1);
 }
 
+/* Primera Seccion */
 .contenedor {
   height: 100vh;
   background-image: url(imagenes/fondo3.png);
@@ -83,21 +94,26 @@ header {
   margin: 0;
 }
 
+/* Boton de la primera seccion   */
 .boton {
-  padding: 12px 24px;
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
   font-size: 1rem;
-  background-color: #ffffff;
-  color: #000;
+  font-family: "Montserrat", sans-serif;
+  background-color: #c58bb9;
+  color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
-
 .boton:hover {
-  background-color: #dddddd;
+  background-color: rgb(185.8, 116.6, 171.4827586207);
 }
 
+/* Logo Animado */
 .logo {
   display: flex;
   justify-content: center;
@@ -121,6 +137,7 @@ header {
     transform: translateX(0);
   }
 }
+/* Seccion Carrusel */
 .presentacion {
   background-color: #000;
   padding: 3rem 1.5rem;
@@ -146,6 +163,13 @@ header {
   object-fit: contain;
 }
 
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Carrusel de la primer seccion de la pagina Servicios  */
 .carousel {
   width: 100%;
   max-width: 700px;
@@ -171,6 +195,17 @@ header {
   }
 }
 
+.carousel-item img {
+  height: 400px;
+  object-fit: cover;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 250px;
+  }
+}
+
 .bg-1 {
   background-image: url("../imagenes/cosmatic.png");
 }
@@ -183,11 +218,31 @@ header {
   background-image: url("../imagenes/tarjeta.png");
 }
 
-.container {
-  max-width: 1140px;
-  margin: 40px auto 0 auto;
+/* --- Segunda parte de la pagina Servicios ---- */
+.servicios-extra h5 {
+  font-weight: 600;
+  color: #c58bb9;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.servicios-extra ul {
+  padding-left: 1.2rem;
+  list-style-type: disc;
+  color: #fff;
+  font-size: 0.95rem;
+}
+.servicios-extra p {
+  color: #fff;
+  font-size: 1rem;
+}
+.servicios-extra .icono-servicio {
+  display: block;
+  margin: 0 auto 0.5rem auto;
+  width: 32px;
+  height: auto;
 }
 
+/*--- Corresponde a la parte de Servicios que esta en el Index, son las tarjeta que muestran los servicios que brinda la agencia ---- */
 .tarjetas-ajustadas {
   padding-left: 3rem;
   padding-right: 3rem;
@@ -205,39 +260,174 @@ header {
   overflow: hidden;
   transition: transform 0.3s;
 }
+.custom-card .card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
 .custom-card:hover {
   transform: translateY(-5px);
 }
 
-.custom-card {
-  border: 2px solid #000;
+/* Primera seccion de la pagina clientes */
+.clientes-section {
+  max-width: 1140px;
+  margin: 0 auto;
   padding: 20px;
-  height: 100%;
+}
+.clientes-section h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.clientes-section .cliente-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
+  transition: transform 0.3s;
+  aspect-ratio: 1/1;
+}
+.clientes-section .cliente-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 1rem;
+}
+.clientes-section .cliente-card:hover {
+  transform: translateY(-5px);
+}
+.clientes-section .cliente-card:hover .overlay {
+  opacity: 1;
+}
+.clientes-section .cliente-card .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.clientes-section .cliente-card .overlay h5 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.clientes-section .cliente-card .overlay .btn {
+  background-color: #c58bb9;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.clientes-section .cliente-card .overlay .btn:hover {
+  background-color: rgb(180, 105, 164.4827586207);
 }
 
-.card-img-top {
-  height: 180px;
-  object-fit: cover;
-  object-position: center;
+/* Segunda Seccion de la pagina Clientes  */
+.agencia-integral-section {
+  background-color: #edf6fa;
+  padding: 40px;
 }
-
-.formulario-contacto {
-  max-width: 600px;
+.agencia-integral-section .container-integral {
+  max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.agencia-integral-section .contenido-texto {
+  flex: 1 1 500px;
+}
+.agencia-integral-section .contenido-texto h2 {
+  font-size: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  margin-bottom: 1rem;
+}
+.agencia-integral-section .contenido-texto p {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.agencia-integral-section .contenido-texto .btn-solicitar {
+  display: inline-block;
+  background-color: #c58bb9;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+.agencia-integral-section .contenido-texto .btn-solicitar:hover {
+  background-color: rgb(180, 105, 164.4827586207);
+}
+.agencia-integral-section .imagen-agencia {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+}
+.agencia-integral-section .imagen-agencia img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+@media (max-width: 768px) {
+  .agencia-integral-section .container-integral {
+    flex-direction: column;
+    text-align: center;
+  }
+  .agencia-integral-section .contenido-texto {
+    text-align: left;
+  }
+  .agencia-integral-section .imagen-agencia {
+    margin-top: 2rem;
+  }
+}
+
+/* Primera Seccion pagina Contacto */
+.contacto-section {
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+.contacto-section h4,
+.contacto-section h5 {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.contacto-section a {
+  color: #fff;
+  text-decoration: underline;
+}
+.contacto-section p {
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+/* Seccion del formulario de contacto */
+.formulario-contacto {
   background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
-  font-family: "Montserrat", sans-serif;
   color: #000;
 }
-
 .formulario-contacto input,
-.formulario-contacto textarea {
+.formulario-contacto textarea,
+.formulario-contacto select {
   width: 100%;
   padding: 20px;
   margin-bottom: 15px;
@@ -245,18 +435,101 @@ header {
   border-radius: 5px;
   font-family: "Montserrat", sans-serif;
 }
-
-.btn-formulario {
+.formulario-contacto .form-check-input {
+  margin-right: 0.5rem;
+}
+.formulario-contacto .form-check-label {
+  color: #000;
+}
+.formulario-contacto .btn-formulario {
   background-color: #000;
   color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 20px;
+}
+.formulario-contacto .btn-formulario:hover {
+  background-color: #dddddd;
 }
 
-.btn-formulario:hover {
-  background-color: #dddddd;
+.boton-enviar {
+  margin-top: 2rem;
+}
+
+/* Primera seccion de la pagina Quienes Somos */
+.nosotros-section {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.nosotros-section .row {
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: stretch;
+}
+.nosotros-section .row .col-md-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.nosotros-section .row img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+.nosotros-section .row h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+.nosotros-section .row p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* Seccion Por que Nosotros -------*/
+.porque-nosotros span.bg-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+}
+.porque-nosotros i {
+  color: #fff;
+}
+.porque-nosotros .bg-primary {
+  background-color: #c58bb9 !important;
+  display: block;
+  margin: 0 auto 2rem;
+}
+.porque-nosotros .btn-primary {
+  background-color: #c58bb9;
+  border-color: #c58bb9;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 0.375rem;
+}
+.porque-nosotros .btn-primary:hover {
+  background-color: rgb(180, 105, 164.4827586207);
+  border-color: rgb(180, 105, 164.4827586207);
+}
+@media (max-width: 576px) {
+  .porque-nosotros .btn-primary {
+    display: block;
+    margin: 1.5rem auto 2.5rem;
+  }
 }
 
 .terminos {
@@ -265,8 +538,13 @@ header {
   line-height: 1.6;
   font-family: "Montserrat", sans-serif;
   color: #fff;
+  /* Titulos para Politicas y Terminos  */
+  /* Parrafos para Politicas y Terminos  */
+  /* Listas para Politicas y Terminos */
 }
-.terminos h1, .terminos h2, .terminos h3 {
+.terminos h1,
+.terminos h2,
+.terminos h3 {
   margin-top: 2rem;
   font-weight: bold;
   color: #fff;
